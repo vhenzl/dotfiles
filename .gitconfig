@@ -20,4 +20,6 @@
 	co = checkout
 	br = branch
 	cp = cherry-pick
+	cm = commit
 	fm = fetch origin master:master
+	sync-u2o = push origin refs/remotes/upstream/*:refs/heads/*
