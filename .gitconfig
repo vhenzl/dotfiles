@@ -23,3 +23,6 @@
 	cm = commit
 	fm = fetch origin master:master
 	sync-u2o = push origin refs/remotes/upstream/*:refs/heads/*
+[core]
+	editor = vim
+
