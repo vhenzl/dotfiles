@@ -26,3 +26,5 @@
 [core]
 	editor = vim
 
+[pull]
+	rebase = merges
