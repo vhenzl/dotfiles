@@ -22,3 +22,5 @@ set mark-symlinked-directories on
 set visible-stats on
 set colored-stats on
 
+# Disable bell
+set bell-style none
