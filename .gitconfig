@@ -28,3 +28,5 @@
 
 [pull]
 	rebase = merges
+[init]
+	defaultBranch = master
