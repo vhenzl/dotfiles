@@ -30,3 +30,5 @@
 	rebase = merges
 [init]
 	defaultBranch = master
+[rebase]
+	autoSquash = true
