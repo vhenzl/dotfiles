@@ -32,3 +32,6 @@
 	defaultBranch = master
 [rebase]
 	autoSquash = true
+
+[include]
+	path = ~/.gitconfig.local
