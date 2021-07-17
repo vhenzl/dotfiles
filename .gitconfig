@@ -25,7 +25,7 @@
 	sync-u2o = push origin refs/remotes/upstream/*:refs/heads/*
 [core]
 	editor = vim
-
+	autocrlf = input
 [pull]
 	rebase = merges
 [init]
