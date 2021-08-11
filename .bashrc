@@ -97,3 +97,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# https://stackoverflow.com/a/62804565/226416
+export GPG_TTY=$(tty)
+echo "test" | gpg --clearsign > /dev/null 2>&1
+
