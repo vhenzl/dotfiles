@@ -24,3 +24,8 @@ set colored-stats on
 
 # Disable bell
 set bell-style none
+
+# map NBSP to regular space (left part has NBSP in quotes, right part has space)
+# https://askubuntu.com/a/1147033
+" ":" "
+
