@@ -112,4 +112,12 @@ export NVM_DIR="$HOME/.nvm"
 # https://unix.stackexchange.com/a/24421
 bind tab:menu-complete
 
-
+[ -s "$HOME/bin/fzf-git.sh" ] && \. "$HOME/bin/fzf-git.sh"
+if [[ $- =~ i ]]; then
+  bind '"\er": redraw-current-line'
+  bind '"\C-g\C-f": "$(_gf)\e\C-e\er"'
+  bind '"\C-g\C-b": "$(_gb)\e\C-e\er"'
+  bind '"\C-g\C-t": "$(_gt)\e\C-e\er"'
+  bind '"\C-g\C-h": "$(_gh)\e\C-e\er"'
+  bind '"\C-g\C-r": "$(_gr)\e\C-e\er"'
+fi
