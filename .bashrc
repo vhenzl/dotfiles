@@ -121,3 +121,6 @@ if [[ $- =~ i ]]; then
   bind '"\C-g\C-h": "$(_gh)\e\C-e\er"'
   bind '"\C-g\C-r": "$(_gr)\e\C-e\er"'
 fi
+
+# GitHub CLI completion: https://cli.github.com/manual/gh_completion
+eval "$(gh completion -s bash)"
