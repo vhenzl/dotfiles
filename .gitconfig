@@ -11,7 +11,7 @@
 	logg = log --oneline --graph --decorate
 	logc = log --pretty=format:%h
 	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-	prune = fetch --prune
+	#prune = fetch --prune
 	undo = reset --soft HEAD^
 	stash-all = stash save --include-untracked
 	top = log --graph --pretty=format:'%C(yellow)%h%Creset%C(red)%d%Creset %s %C(bold blue)<%an>%Creset' -10
@@ -21,6 +21,9 @@
 	co = checkout
 	br = branch
 	cp = cherry-pick
+	cpc = -c core.editor=true cp --continue
+	rbc = -c core.editor=true rebase --continue
+	rba = rebase --abort
 	cm = commit
 	fm = fetch origin master:master
 	sync-u2o = push origin refs/remotes/upstream/*:refs/heads/*
