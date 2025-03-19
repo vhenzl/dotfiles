@@ -124,10 +124,3 @@ fi
 
 # GitHub CLI completion: https://cli.github.com/manual/gh_completion
 eval "$(gh completion -s bash)"
-
-# added by NPNM install script (hardcoded HOME replaced with var)
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
