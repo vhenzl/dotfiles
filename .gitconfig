@@ -17,7 +17,7 @@
 	top = log --graph --pretty=format:'%C(yellow)%h%Creset%C(red)%d%Creset %s %C(bold blue)<%an>%Creset' -10
 	log-pr = log --graph --pretty=format:'%C(yellow)%h%Creset %s %C(bold blue)<%an>%Creset'
 	sub-update = "!f() { cd $1 && git checkout master && git pull && git submodule update --init --recursive; }; f"
-	brs = for-each-ref --sort=committerdate --format='%(color:green)%(refname:short)%(color:reset)%09%09%(committerdate) %(color:yellow)<%(authorname)>%(color:normal)' refs/heads
+	brs = for-each-ref --sort=committerdate --format='%(color:green)%(align:60)%(refname:short)%(end)%(color:reset)%20%(align:31,right)%(committerdate:rfc)%(end)%(color:yellow)%20%(align:18)<%(authorname)>%(end)%(color:cyan)%20%(upstream:remotename)%(color:red)%20%(upstream:track)%(color:reset)' refs/heads
 	co = checkout
 	br = branch
 	cp = cherry-pick
