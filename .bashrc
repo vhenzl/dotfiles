@@ -124,3 +124,6 @@ fi
 
 # GitHub CLI completion: https://cli.github.com/manual/gh_completion
 eval "$(gh completion -s bash)"
+
+# completion for pnpm v9+
+source ~/bin/completion-for-pnpm.bash
