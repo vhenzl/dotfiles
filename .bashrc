@@ -125,7 +125,9 @@ if [[ $- =~ i ]]; then
 fi
 
 # GitHub CLI completion: https://cli.github.com/manual/gh_completion
-eval "$(gh completion -s bash)"
+if command -v gh &>/dev/null; then
+  eval "$(gh completion -s bash)"
+fi
 
 # https://getcomposer.org/doc/03-cli.md#global
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
