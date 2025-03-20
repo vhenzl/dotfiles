@@ -125,5 +125,8 @@ fi
 # GitHub CLI completion: https://cli.github.com/manual/gh_completion
 eval "$(gh completion -s bash)"
 
+# https://getcomposer.org/doc/03-cli.md#global
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
 # completion for pnpm v9+
 source ~/bin/completion-for-pnpm.bash
