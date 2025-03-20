@@ -1,7 +1,7 @@
 [user]
 	email = vasek.henzl@gmail.com
 	name = Vašek Henzl
-	signingkey = 1EAA11598D492CFD
+	#signingkey = 1EAA11598D492CFD
 [alias]
 	please = push --force-with-lease
 	it = !git init && git commit -m \"Initialize repository\" --allow-empty
@@ -40,4 +40,7 @@
 [include]
 	path = ~/.gitconfig.local
 [commit]
-	gpgsign = true
+	#gpgsign = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

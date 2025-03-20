@@ -98,9 +98,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# https://stackoverflow.com/a/62804565/226416
+# https://linux.die.net/man/1/gpg-agent
 export GPG_TTY=$(tty)
-echo "test" | gpg --clearsign > /dev/null 2>&1
+
+# https://readme.phys.ethz.ch/documentation/keychain/
+eval `keychain --nogui --quiet --eval --agents ssh,gpg id_ed25519 1EAA11598D492CFD`
 
 # added by https://github.com/nvm-sh/nvm install script
 export NVM_DIR="$HOME/.nvm"
