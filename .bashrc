@@ -121,3 +121,10 @@ if [[ $- =~ i ]]; then
   bind '"\C-g\C-h": "$(_gh)\e\C-e\er"'
   bind '"\C-g\C-r": "$(_gr)\e\C-e\er"'
 fi
+
+# SSH key
+/usr/bin/keychain --nogui $HOME/.ssh/id_ed25519
+source $HOME/.keychain/$HOSTNAME-sh
+
+setxkbmap cz bksl -option lv3:ralt_switch
+WAYLAND_DISPLAY="wayland-1"
