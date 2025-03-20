@@ -40,4 +40,4 @@
 [include]
 	path = ~/.gitconfig.local
 [commit]
-	gpgsign = true
+	#gpgsign = true
