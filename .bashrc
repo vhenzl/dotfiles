@@ -134,3 +134,13 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 # completion for pnpm v9+
 source ~/bin/completion-for-pnpm.bash
+
+# `pnpm install -g` yields a warning: Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
+# `pnpm setup` creates this:
+# pnpm
+export PNPM_HOME="/home/vah/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
