@@ -144,3 +144,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Go user binaries (installed with `go install`)
+if [ -d "$HOME/go/bin" ]; then
+  export PATH="$PATH:$HOME/go/bin"
+fi
