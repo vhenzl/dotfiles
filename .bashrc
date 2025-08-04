@@ -149,3 +149,15 @@ esac
 if [ -d "$HOME/go/bin" ]; then
   export PATH="$PATH:$HOME/go/bin"
 fi
+
+# fnm
+FNM_PATH="/home/vah/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  # https://github.com/Schniz/fnm/blob/master/docs/configuration.md
+  eval "`fnm env`"
+fi
+
+if command -v fnm &>/dev/null; then
+  eval "$(fnm completions --shell bash)"
+fi
